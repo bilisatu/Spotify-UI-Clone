@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Spotify-Clone</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="spotify-clone">
+            <aside class="sidebar">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="40" height="40" role="img" aria-label="Spotify logo showing three curved sound waves inside a green circle, used as the site logo in the sidebar to the left of the text Spotify. Neutral, brand-focused." focusable="false">
+                            <circle cx="32" cy="32" r="32" fill="#1DB954"/>
+                            <path d="M16 24c10-6 28-6 36-2" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-width="3.5"/>
+                            <path d="M14 34c12-6 34-6 40-1" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-width="3.5"/>
+                            <path d="M18 42c10-5 24-5 30-1" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-width="3.5"/>
+                        </svg>
+                    </div>
+                    <span>Spotify</span>
+                </div>
+
+                <nav class="main-nav">
+                    <a href="#" class="nav-item active">
+                        <span class="nav-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Home">
+                                <path d="M3 10.5L12 4L21 10.5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V10.5Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 21V12H15V21" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <span>Home</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <span class="nav-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Search">
+                                <circle cx="11" cy="11" r="8" stroke="#fff" stroke-width="2"/>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                        <span>Search</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <span class="nav-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Library">
+                                <rect x="3" y="4" width="18" height="16" rx="2" stroke="#fff" stroke-width="2"/>
+                                <line x1="7" y1="8" x2="7" y2="16" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="12" y1="8" x2="12" y2="16" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="17" y1="8" x2="17" y2="16" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                        <span>Your Library</span>
+                    </a>
+                </nav>
+
+                <div class="playlists-section">
+                    <div class="create-playlist">
+                        <span class="playlist-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Create Playlist">
+                                <circle cx="12" cy="12" r="10" stroke="#fff" stroke-width="2"/>
+                                <line x1="12" y1="8" x2="12" y2="16" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="8" y1="12" x2="16" y2="12" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                        <span>Create Playlist</span>
+                    </div>
+                    <div class="liked-songs">
+                        <span class="playlist-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Liked Songs">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z" fill="#1DB954"/>
+                            </svg>
+                        </span>
+                        <span>Liked Songs</span>
+                    </div>
+                </div>
+            </aside>
+            
+            
+            <main class="main-content">
+                <header class="main-header">
+                    <div class="nav-buttons">
+                        <button class="nav-arrow" aria-label="Back">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 18L9 12L15 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <button class="nav-arrow" aria-label="Forward">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 6L15 12L9 18" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="user-menu">
+                        <button class="upgrade-btn">Upgrade</button>
+                        <div class="user-profile">
+                            <div class="profile-pic">👤</div>
+                            <span>Username</span>
+                            <span>▾</span>
+                        </div>
+                    </div>
+                </header>
+
+                <section class="recent-section">
+                    <h1>Good Afternoon</h1>
+                    <div class="recent-grid">
+                        <div class="playlist-card">Liked Songs</div>
+                        <div class="playlist-card">Daily Mix</div>
+                        <div class="playlist-card">Discover Weekly</div>
+                        <div class="playlist-card">Release Radar</div>
+                        <div class="playlist-card">Chill Hits</div>
+                        <div class="playlist-card">Rock Classics</div>
+                    </div>
+                </section>
+
+                <section class="made-for-you">
+                    <h2>Made for Username</h2>
+                    <div class="recommendation-grid">
+                        <div class="rec-card">Daily Mix 1</div>
+                        <div class="rec-card">Daily Mix 2</div>
+                        <div class="rec-card">Daily Mix 3</div>
+                        <div class="rec-card">Daily Mix 4</div>
+                        <div class="rec-card">Daily Mix 5</div>
+                        <div class="rec-card">Daily Mix 6</div>
+                    </div>
+                </section>
+            </main>
+
+
+            <footer class="player-bar">
+                <div class="now-playing">
+                    <div class="track-info">
+                        <div class="album-cover">🎵</div>
+                        <div class="track-details">
+                            <div class="track-name">Song Name</div>
+                            <div class="track-name">Artist Name</div>
+                        </div>
+                        <button class="like-btn" aria-label="Like" title="Like">
+                            <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                        </button>
+                    </div> 
+                </div>
+
+                <div class="playback-controls">
+                    <div class="control-buttons">
+                        <button class="control-btn">🔀</button>
+                        <button class="control-btn">⏮</button>
+                        <button class="play-btn">▶</button>
+                        <button class="control-btn">⏭</button>
+                        <button class="control-btn">🔁</button>
+                    </div>
+                    <div class="progress-bar">
+                        <span class="time">0:00</span>
+                        <div class="progress-track">
+                            <div class="progress-fill"></div>
+                        </div>
+                        <span class="time">3:45</span>
+                    </div>
+                </div>
+
+
+                <div class="volume-controls">
+                    <button class="volume-btn">🔊</button>
+                    <div class="volume-bar">
+                        <div class="volume-fill"></div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script>
+        // Toggle like state visually and for accessibility
+        document.querySelectorAll('.like-btn').forEach(function(btn) {
+            btn.setAttribute('aria-pressed', 'false');
+            btn.addEventListener('click', function() {
+                const isLiked = btn.classList.toggle('liked');
+                btn.setAttribute('aria-pressed', isLiked ? 'true' : 'false');
+            });
+        });
+        </script>
+    </body>
+ </html>
