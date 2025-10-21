@@ -1,0 +1,486 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.spotify-clone {
+    display:grid;
+    grid-template-areas: 
+    "sidebar main"
+    "player player";
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 250px 1fr;
+    height:100vh;
+}
+
+.sidebar {
+    grid-area:sidebar;
+    background:#000000;
+    color:#b3b3b3;
+    padding:20px 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap:10px;
+    margin-bottom:30px;
+    padding:0 10px;
+}
+
+.logo-icon {
+    background:#fff;
+    color:#000;
+    width:30px;
+    height:30px;
+    border-radius:2px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    font-weight:bold;
+}
+
+.logo span {
+    color:white;
+    font-weight:bold;
+    font-size:24px;
+}
+
+.main-nav {
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    margin-bottom:30px;
+}
+
+.nav-item {
+    display:flex;
+    align-items:center;
+    text-decoration:none;
+    color:#b3b3b3;
+    gap:15px;
+    padding:10px 15px;
+    border-radius:4px;
+    transition: all 0.2s;
+}
+
+.nav-item:hover {
+    color:white;
+}
+
+.nav-item.active {
+    background:#282828;
+    color:white;
+}
+
+.nav-icon {
+    font-size:20px;
+}
+
+.playlists-section {
+    border-top:1px solid #282828;
+    padding-top:20px;
+}
+
+.create-playlist, .liked-songs {
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:10px 15px;
+    border-radius:4px;
+    cursor:pointer;
+}
+
+.create-playlist:hover, .liked-songs:hover {
+    color:white;
+}
+
+.playlist-icon {
+    width:24px;
+    height:24px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.main-content {
+    grid-area:main;
+    background:#121212;
+    color:white;
+    padding:20px;
+    overflow-y:auto;
+}
+
+.main-header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.nav-button {
+    display:flex;
+    gap:15px;
+}
+
+.nav-arrow {
+    background:rgba(0,0,0,0.7);
+    color:white;
+    cursor:pointer;
+    border:none;
+    border-radius:50%;
+    width:32px;
+    height:32px;
+}
+
+.user-menu {
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.upgrade-btn {
+    background:transparent;
+    color:white;
+    border:1px solid white;
+    border-radius:20px;
+    cursor:pointer;
+    padding:8px 15px;
+}
+
+.user-profile {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:rgba(0,0,0,0.7);
+    padding:5px 10px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+.profile-pic {
+    background:#535353;
+    width:28px;
+    height:28px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.recent-section h1 {
+    font-size:32px;
+    margin-bottom:20px;
+    font-weight:bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.recent-grid {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:15px;
+    margin-bottom:40px;
+}
+
+.playlist-card {
+    background:#282828;
+    padding:15px;
+    border-radius:8px;
+    height:80px;
+    display:flex;
+    position: relative;
+    overflow:hidden;
+    align-items:center;
+    gap:15px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.playlist-card::before {
+    content:"▶";
+    font-size:20px;
+    background:#1DB954;
+    color:black;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    opacity:0;
+    transition: opacity 0.3s;
+}
+
+.playlist-card:hover::before {
+    opacity: 1;
+}
+
+.playlist-card::after {
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    background:linear-gradient(90deg, transparent, rgba(255, 255, 0.1), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        left:-100%;
+
+    }
+
+    100% {
+        left:100%;
+    }
+}
+
+.made-for-you h2 {
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:24px;
+    margin-bottom:20px;
+    font-weight:bold;
+}
+
+.recommendation-grid {
+    display:grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap:20px;
+}
+
+.rec-card {
+    background:#181818;
+    padding:15px;
+    border-radius:8px;
+    transition: all ease 0.3s;
+    position:relative;
+    height:250px;
+}
+
+.rec-card:hover {
+    background:#282828;
+    transform:translateY(-5px);
+    box-shadow:0 10px 20px rgba(0,0,0,0,3);
+}
+
+
+.player-bar {
+    grid-area:player;
+    background:#181818;
+    color:white;
+    border-top:1px solid #282828;
+    padding:0 20px;
+    height:90px;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+.now-playing {
+    width:30%;
+}
+
+.track-info {
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.album-cover {
+    width:56px;
+    height:56px;
+    background:#333;
+    border-radius:4px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    font-size:20px;
+}
+
+.track-details {
+    display:flex;
+    flex-direction:column;
+}
+
+.track-name {
+    font-size:14px;
+    color:white;
+}
+
+.artist-name {
+    font-size:12px;
+    color:#b3b3b3;
+}
+
+.like-btn {
+    border:none;
+    background:none;
+    color:#b3b3b3;
+    font-size:0; /* Hide stray text spacing */
+    cursor:pointer;
+    margin-left:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.like-btn:hover {
+    color:#1DB954;
+}
+
+/* Heart icon coloring (SVG path will inherit currentColor when fill not set) */
+.like-btn svg path {
+    fill: currentColor;
+}
+
+.like-btn.liked {
+    color:#1DB954;
+}
+
+.like-btn.liked svg path {
+    fill:#1DB954;
+}
+
+.playback-controls {
+    width:40%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+}
+
+.control-buttons {
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.control-btn {
+    background:none;
+    border:none;
+    color:#b3b3b3;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.control-btn:hover {
+    color:white;
+}
+
+.play-btn {
+    background:white;
+    border:none;
+    border-radius:50%;
+    width:32px;
+    height:32px;
+    font-size:14px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    cursor:pointer;
+    transition: all 0.2s;
+}
+
+.play-btn.playing {
+    background:#1DB954;
+    color:white;
+}
+
+.play-btn:hover {
+    transform:scale(1.06);
+}
+
+.progress-bar {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    width:100%;
+}
+
+.time {
+    font-size:12px;
+    color:#b3b3b3;
+}
+
+.progress-track {
+    flex:1;
+    height: 4px;
+    background:#535353;
+    border-radius:2px;
+    position:relative;
+    cursor:pointer;
+}
+
+.progress-fill {
+    position:absolute;
+    height:100%;
+    width:30%;
+    background:#b3b3b3;
+    border-radius:2px;
+    transition: width 0.1s linear;
+    animation: progress 30s linear infinite;
+}
+
+@keyframes progress {
+    from {
+        width:0%;
+    }
+
+    to {
+        width:100%;
+    }
+}
+
+.progress-track:hover .progress-fill {
+    background:#1DB954;
+}
+
+.volume-btn {
+    background:none;
+    border:none;
+    color:#b3b3b3;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.volume-bar {
+    width:100px;
+    height:4px;
+    background:#535353;
+    border-radius:2px;
+    position:relative;
+    cursor:pointer;
+}
+.volume-fill {
+    position: absolute;
+    height:100%;
+    width:70%;
+    background:#b3b3b3;
+    border-radius:2px;
+}
+
+.volume-bar:hover .volume-fill {
+    background:#1DB954;
+}
+
+@media (max-width:768px) {
+    .spotify-clone {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "main"
+        "player";
+    }
+
+
+    .sidebar {
+        display:none;
+    }
+
+    .player-bar {
+        flex-direction:column;
+        height:auto;
+        padding:10px;
+    }
+}
