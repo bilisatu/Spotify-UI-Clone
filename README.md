@@ -68,11 +68,6 @@ Then visit `http://localhost:5501` in your browser.
   - Controls playback, track switching, progress bar and volume.
   - Binds clickable cards, keyboard shortcuts and the “Now playing” toast.
 
-## Customising
-
-- Replace `track1.mp3`–`track4.mp3` in `media/` with your own audio files.
-- Swap the cover images in `media/covers/` while keeping the filenames (or update `script.js` accordingly).
-- Adjust colors, spacing and animations in `style.css` to match your personal branding.
 
 ## Author
 
