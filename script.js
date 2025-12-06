@@ -1,4 +1,3 @@
-// Toggle like state visually and for accessibility
 document.querySelectorAll('.like-btn').forEach(function(btn) {
   btn.setAttribute('aria-pressed', 'false');
   btn.addEventListener('click', function() {
