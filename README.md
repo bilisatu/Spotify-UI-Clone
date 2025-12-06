@@ -2,6 +2,8 @@
 
 A polished Spotify-inspired music player built by **Safraeel** using **HTML, CSS and vanilla JavaScript**. It includes real audio playback, custom cover art, keyboard shortcuts, and a responsive three-panel layout.
 
+**Live demo:** https://bilisatu.github.io/Spotify-UI-Clone/
+
 ## Overview
 
 This project recreates the feel of the Spotify desktop client:
