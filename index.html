@@ -4,9 +4,25 @@
         <title>Spotify-Clone</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Spotify-inspired premium music player UI built by Safraeel with responsive layout, interactive player controls, and modern dark styling.">
+        <meta name="theme-color" content="#000000">
+        <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%231DB954'/%3E%3Cpath d='M16 24c10-6 28-6 36-2' fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-width='3.5'/%3E%3Cpath d='M14 34c12-6 34-6 40-1' fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-width='3.5'/%3E%3Cpath d='M18 42c10-5 24-5 30-1' fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-width='3.5'/%3E%3C/svg%3E">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <header class="portfolio-hero">
+            <div class="hero-left">
+                <p class="hero-kicker">Spotify-style music experience</p>
+                <h1 class="hero-title">Safraeel — Frontend Developer</h1>
+                <p class="hero-subtitle">Interactive Spotify-inspired player with real audio, real cover art, and a responsive premium UI. Built from scratch with HTML, CSS, and vanilla JavaScript.</p>
+            </div>
+            <ul class="hero-highlights">
+                <li>Real HTML5 audio player (play, pause, next, shuffle, repeat)</li>
+                <li>Responsive Spotify-style layout (sidebar, content, persistent player)</li>
+                <li>Local cover art + keyboard shortcuts for a true app feel</li>
+            </ul>
+        </header>
+
         <div class="spotify-clone">
             <aside class="sidebar">
                 <div class="logo">
@@ -54,23 +70,43 @@
                 </nav>
 
                 <div class="playlists-section">
-                    <div class="create-playlist">
-                        <span class="playlist-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Create Playlist">
-                                <circle cx="12" cy="12" r="10" stroke="#fff" stroke-width="2"/>
-                                <line x1="12" y1="8" x2="12" y2="16" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-                                <line x1="8" y1="12" x2="16" y2="12" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </span>
-                        <span>Create Playlist</span>
+                    <div class="library-header">
+                        <span>Your Library</span>
+                        <button class="library-add-btn" aria-label="Create playlist">+</button>
                     </div>
-                    <div class="liked-songs">
-                        <span class="playlist-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Liked Songs">
-                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z" fill="#1DB954"/>
-                            </svg>
-                        </span>
-                        <span>Liked Songs</span>
+
+                    <div class="playlists-scroll">
+                        <div class="playlist-row">
+                            <span class="playlist-badge">Playlist</span>
+                            <div class="playlist-meta">
+                                <div class="playlist-title">Create Playlist</div>
+                                <div class="playlist-subtitle">Add songs you love</div>
+                            </div>
+                        </div>
+
+                        <div class="playlist-row">
+                            <span class="playlist-badge liked">♥</span>
+                            <div class="playlist-meta">
+                                <div class="playlist-title">Liked Songs</div>
+                                <div class="playlist-subtitle">Playlist • 34 songs</div>
+                            </div>
+                        </div>
+
+                        <div class="playlist-row">
+                            <span class="playlist-badge">Playlist</span>
+                            <div class="playlist-meta">
+                                <div class="playlist-title">Chill Vibes</div>
+                                <div class="playlist-subtitle">By You • 58 songs</div>
+                            </div>
+                        </div>
+
+                        <div class="playlist-row">
+                            <span class="playlist-badge">Playlist</span>
+                            <div class="playlist-meta">
+                                <div class="playlist-title">Workout Mix</div>
+                                <div class="playlist-subtitle">By You • 42 songs</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </aside>
@@ -93,34 +129,136 @@
                     <div class="user-menu">
                         <button class="upgrade-btn">Upgrade</button>
                         <div class="user-profile">
-                            <div class="profile-pic">👤</div>
-                            <span>Username</span>
+                            <div class="profile-pic">S</div>
+                            <span>Safraeel</span>
                             <span>▾</span>
                         </div>
                     </div>
                 </header>
 
                 <section class="recent-section">
-                    <h1>Good Afternoon</h1>
+                    <h1>Good evening</h1>
                     <div class="recent-grid">
-                        <div class="playlist-card">Liked Songs</div>
-                        <div class="playlist-card">Daily Mix</div>
-                        <div class="playlist-card">Discover Weekly</div>
-                        <div class="playlist-card">Release Radar</div>
-                        <div class="playlist-card">Chill Hits</div>
-                        <div class="playlist-card">Rock Classics</div>
+                        <div class="playlist-card" data-track-index="0">
+                            <div class="playlist-info">
+                                <div class="playlist-title">Focus Beats</div>
+                                <div class="playlist-subtitle">Playlist  b7 Safraeel</div>
+                            </div>
+                        </div>
+                        <div class="playlist-card" data-track-index="1">
+                            <div class="playlist-info">
+                                <div class="playlist-title">Late Night Code</div>
+                                <div class="playlist-subtitle">Playlist  b7 Safraeel</div>
+                            </div>
+                        </div>
+                        <div class="playlist-card" data-track-index="2">
+                            <div class="playlist-info">
+                                <div class="playlist-title">Morning Drive</div>
+                                <div class="playlist-subtitle">Playlist  b7 Safraeel</div>
+                            </div>
+                        </div>
+                        <div class="playlist-card" data-track-index="3">
+                            <div class="playlist-info">
+                                <div class="playlist-title">Sunset Vibes</div>
+                                <div class="playlist-subtitle">Playlist  b7 Safraeel</div>
+                            </div>
+                        </div>
+                        <div class="playlist-card">
+                            <div class="playlist-info">
+                                <div class="playlist-title">Chill Hits</div>
+                                <div class="playlist-subtitle">Easy vibes to unwind</div>
+                            </div>
+                        </div>
+                        <div class="playlist-card">
+                            <div class="playlist-info">
+                                <div class="playlist-title">Rock Classics</div>
+                                <div class="playlist-subtitle">Legends from every decade</div>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
                 <section class="made-for-you">
-                    <h2>Made for Username</h2>
+                    <h2>Made for Safraeel</h2>
                     <div class="recommendation-grid">
-                        <div class="rec-card">Daily Mix 1</div>
-                        <div class="rec-card">Daily Mix 2</div>
-                        <div class="rec-card">Daily Mix 3</div>
-                        <div class="rec-card">Daily Mix 4</div>
-                        <div class="rec-card">Daily Mix 5</div>
-                        <div class="rec-card">Daily Mix 6</div>
+                        <div class="rec-card">
+                            <div class="rec-text">
+                                <div class="rec-title">Daily Mix 1</div>
+                                <div class="rec-subtitle">Tame Impala, Parcels, LEISURE</div>
+                            </div>
+                        </div>
+                        <div class="rec-card">
+                            <div class="rec-text">
+                                <div class="rec-title">Daily Mix 2</div>
+                                <div class="rec-subtitle">Odesza, SG Lewis, Ben Böhmer</div>
+                            </div>
+                        </div>
+                        <div class="rec-card">
+                            <div class="rec-text">
+                                <div class="rec-title">Daily Mix 3</div>
+                                <div class="rec-subtitle">Kendrick, Drake, Travis</div>
+                            </div>
+                        </div>
+                        <div class="rec-card">
+                            <div class="rec-text">
+                                <div class="rec-title">Daily Mix 4</div>
+                                <div class="rec-subtitle">Phoebe Bridgers, Maggie Rogers</div>
+                            </div>
+                        </div>
+                        <div class="rec-card">
+                            <div class="rec-text">
+                                <div class="rec-title">Daily Mix 5</div>
+                                <div class="rec-subtitle">Fred again.., Bicep, Jamie xx</div>
+                            </div>
+                        </div>
+                        <div class="rec-card">
+                            <div class="rec-text">
+                                <div class="rec-title">Daily Mix 6</div>
+                                <div class="rec-subtitle">Hans Zimmer, Max Richter</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="recently-played">
+                    <h2>Recently played</h2>
+                    <div class="recommendation-grid">
+                        <div class="rec-card">
+                            <div class="rec-text">
+                                <div class="rec-title">Lo-fi Beats</div>
+                                <div class="rec-subtitle">Beats to relax/study to</div>
+                            </div>
+                        </div>
+                        <div class="rec-card">
+                            <div class="rec-text">
+                                <div class="rec-title">Top Hits Global</div>
+                                <div class="rec-subtitle">The world’s biggest tracks</div>
+                            </div>
+                        </div>
+                        <div class="rec-card">
+                            <div class="rec-text">
+                                <div class="rec-title">Coding Focus</div>
+                                <div class="rec-subtitle">Ambient electronica for flow</div>
+                            </div>
+                        </div>
+                        <div class="rec-card">
+                            <div class="rec-text">
+                                <div class="rec-title">Rap Caviar</div>
+                                <div class="rec-subtitle">Heavy hitters of hip-hop</div>
+                            </div>
+                        </div>
+                        <div class="rec-card">
+                            <div class="rec-text">
+                                <div class="rec-title">Jazz Vibes</div>
+                                <div class="rec-subtitle">Late-night modern jazz</div>
+                            </div>
+                        </div>
+                        <div class="rec-card">
+                            <div class="rec-text">
+                                <div class="rec-title">Deep Focus</div>
+                                <div class="rec-subtitle">Minimal, downtempo, instrumental</div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </main>
@@ -129,10 +267,10 @@
             <footer class="player-bar">
                 <div class="now-playing">
                     <div class="track-info">
-                        <div class="album-cover">🎵</div>
+                        <div class="album-cover"></div>
                         <div class="track-details">
-                            <div class="track-name">Song Name</div>
-                            <div class="track-name">Artist Name</div>
+                            <div class="track-name">Focus Beats</div>
+                            <div class="track-name">Safraeel</div>
                         </div>
                         <button class="like-btn" aria-label="Like" title="Like">
                             <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false">
@@ -144,39 +282,68 @@
 
                 <div class="playback-controls">
                     <div class="control-buttons">
-                        <button class="control-btn">🔀</button>
-                        <button class="control-btn">⏮</button>
-                        <button class="play-btn">▶</button>
-                        <button class="control-btn">⏭</button>
-                        <button class="control-btn">🔁</button>
+                        <button class="control-btn" aria-label="Shuffle">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 4H7L10 9L14 15H17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M17 4L20 7L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M4 20H7L10 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M14 9L16 7H17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <button class="control-btn" aria-label="Previous">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M18 6L10 12L18 18V6Z" fill="currentColor"/>
+                            </svg>
+                        </button>
+                        <button class="play-btn" aria-label="Play">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 5V19L18 12L8 5Z" fill="currentColor"/>
+                            </svg>
+                        </button>
+                        <button class="control-btn" aria-label="Next">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M6 6L14 12L6 18V6Z" fill="currentColor"/>
+                            </svg>
+                        </button>
+                        <button class="control-btn" aria-label="Repeat">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 7H15C17.2091 7 19 8.79086 19 11V12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M8 4L4 7L8 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M20 17H9C6.79086 17 5 15.2091 5 13V12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M16 20L20 17L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
                     </div>
                     <div class="progress-bar">
-                        <span class="time">0:00</span>
+                        <span class="time time-current">0:00</span>
                         <div class="progress-track">
                             <div class="progress-fill"></div>
                         </div>
-                        <span class="time">3:45</span>
+                        <span class="time time-total">3:45</span>
                     </div>
                 </div>
 
 
                 <div class="volume-controls">
-                    <button class="volume-btn">🔊</button>
+                    <button class="volume-btn" aria-label="Volume">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 9V15H8L13 19V5L8 9H4Z" fill="currentColor"/>
+                            <path d="M16 9C16.6 9.8 17 10.8 17 12C17 13.2 16.6 14.2 16 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M18.5 6.5C19.7 8 20.5 9.9 20.5 12C20.5 14.1 19.7 16 18.5 17.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
                     <div class="volume-bar">
                         <div class="volume-fill"></div>
                     </div>
                 </div>
             </footer>
         </div>
-        <script>
-        // Toggle like state visually and for accessibility
-        document.querySelectorAll('.like-btn').forEach(function(btn) {
-            btn.setAttribute('aria-pressed', 'false');
-            btn.addEventListener('click', function() {
-                const isLiked = btn.classList.toggle('liked');
-                btn.setAttribute('aria-pressed', isLiked ? 'true' : 'false');
-            });
-        });
-        </script>
+
+        <!-- Hidden audio element powered by the JS player -->
+        <audio id="audio-player"></audio>
+
+        <script src="script.js"></script>
     </body>
  </html>
