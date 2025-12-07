@@ -29,33 +29,33 @@ document.querySelectorAll('.like-btn').forEach(function(btn) {
       id: 'focus-beats',
       title: 'Focus Beats',
       artist: 'Safraeel',
-      cover: 'media/covers/focus-beats.jpg',
-      src: 'media/track1.mp3',
+      cover: './media/covers/focus-beats.jpg',
+      src: './media/track1.mp3',
       duration: 225
     },
     {
       id: 'late-night-code',
       title: 'Late Night Code',
       artist: 'Safraeel',
-      cover: 'media/covers/late-night-code.jpg',
-      src: 'media/track2.mp3',
+      cover: './media/covers/late-night-code.jpg',
+      src: './media/track2.mp3',
       duration: 252
     },
     {
       id: 'morning-drive',
       title: 'Morning Drive',
       artist: 'Safraeel',
-      cover: 'media/covers/Morning-Drive.jpg',
-      src: 'media/track3.mp3',
+      cover: './media/covers/morning-drive.jpg',
+      src: './media/track3.mp3',
       duration: 210
     },
     {
       id: 'sunset-vibes',
       title: 'Sunset Vibes',
       artist: 'Safraeel',
-      cover: 'media/covers/sunset-vibes.jpg',
-      src: 'media/track4.mp3',
-      duration: 240
+      cover: './media/covers/sunset-vibes.jpg',
+      src: './media/track4.mp3',
+      duration: 198
     }
   ];
 
